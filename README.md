@@ -4,11 +4,11 @@ Supported families: 6/7 series, Ultrascale, US+.
 Source files: VHDL
 
 FP WORD:
- ___________________
-| exp | sign | mant |
-|___________________|
 
-  [8]   [1]   [24+1]
+EXPINENT - 8-bits
+SIGN - 1-bit
+MANTISSA - 24+1 bits.
+'1' means hidden one for normalized floating-point values;
 
 Math: 
 A = (-1)^sign(A) * 2^(exp(A)-63) * mant(A)
