@@ -2,19 +2,20 @@
 -------------------------------------------------------------------------------
 --
 -- Title       : Readme
--- Design      : FP32 LOGIC
+-- Design      : FP32 Logic
 -- Author      : Kapitanov Alexander
--- Company     : insys.ru
+-- Company     : 
 -- E-mail      : sallador@bk.ru
 --
 -- Description : Floating point FP32 (same as IEEE-754 w/ some diffs); 
 --	 Supported families: 6/7 series, Ultrascale, US+.
 --	 Source files: VHDL
 --
---   FP WORD:
+--   FP WORD BIT FIELD:
 --    ___________________
+--   |     |      |      |
 --   | exp | sign | mant |
---   |___________________|
+--   |_____|______|______|
 --
 -- 	   [8]   [1]   [24+1]
 -- 	 
@@ -23,12 +24,13 @@
 --   A = (-1)^sign(A) * 2^(exp(A)-63) * mant(A)
 
 -- Component list:
---   > fp32_fix2float - convert data from INT32 to FP32.
---   > fp32_float2fix - convert data from FP32  to INT32.
---   > fp32_addsub    - floating point adder.
---   > fp32_mult      - floating point multiplier.
+--   > fp32_fix2float  - convert data from INT32 to FP32.
+--   > fp32_float2fix  - convert data from FP32  to INT32.
+--   > fp32_addsub_one - floating point adder / substractor.
+--   > fp32_addsub_dbl - floating point adder & substractor.
+--   > fp32_mult       - floating point multiplier.
 --
---   > rtl_dsp48_25x25 - int mult 25x25 based on DSP48.
+--   > rtl_dsp48_25x25 - int multiplier 25x25 based on DSP48.
 --
 --
 -------------------------------------------------------------------------------
